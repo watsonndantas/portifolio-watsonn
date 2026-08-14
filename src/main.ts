@@ -1,4 +1,5 @@
 import './style.css'
+import { INSTAGRAM_POSTS, INSTAGRAM_PROFILE } from './instagram.ts'
 
 const HEADER_OFFSET = 84
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -338,6 +339,78 @@ function initHeroCanvas(): void {
   })
 }
 
+function normalizeInstagramUrl(url: string): string {
+  const trimmed = url.trim()
+  const match = trimmed.match(/instagram\.com\/(p|reel|tv)\/([A-Za-z0-9_-]+)/i)
+  if (!match) return trimmed.replace(/\?.*$/, '')
+  return `https://www.instagram.com/${match[1]}/${match[2]}/`
+}
+
+function createInstagramEmbed(permalink: string): HTMLQuoteElement {
+  const quote = document.createElement('blockquote')
+  quote.className = 'instagram-media'
+  quote.setAttribute('data-instgrm-permalink', permalink)
+  quote.setAttribute('data-instgrm-version', '14')
+  quote.setAttribute('data-instgrm-captioned', '')
+
+  const link = document.createElement('a')
+  link.href = permalink
+  link.target = '_blank'
+  link.rel = 'me noopener noreferrer'
+  link.textContent = 'Ver no Instagram'
+  quote.append(link)
+
+  return quote
+}
+
+function loadInstagramEmbedScript(): Promise<void> {
+  const api = (window as Window & { instgrm?: { Embeds: { process: () => void } } }).instgrm
+  if (api) return Promise.resolve()
+
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector<HTMLScriptElement>('script[src*="instagram.com/embed.js"]')
+    if (existing) {
+      existing.addEventListener('load', () => resolve())
+      existing.addEventListener('error', () => reject(new Error('Instagram embed.js')))
+      return
+    }
+
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://www.instagram.com/embed.js'
+    script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Instagram embed.js'))
+    document.body.append(script)
+  })
+}
+
+function initInstagramEmbeds(): void {
+  const root = document.querySelector<HTMLElement>('#instagram-embeds')
+  if (!root) return
+
+  const permalinks =
+    INSTAGRAM_POSTS.length > 0
+      ? INSTAGRAM_POSTS.map(normalizeInstagramUrl)
+      : [INSTAGRAM_PROFILE]
+
+  root.replaceChildren()
+  for (const permalink of permalinks) {
+    const wrap = document.createElement('div')
+    wrap.className = 'ig-embed'
+    wrap.append(createInstagramEmbed(permalink))
+    root.append(wrap)
+  }
+
+  void loadInstagramEmbedScript()
+    .then(() => {
+      const api = (window as Window & { instgrm?: { Embeds: { process: () => void } } }).instgrm
+      api?.Embeds.process()
+    })
+    .catch(() => {
+      /* o link interno do embed continua disponível */
+    })
+}
+
 initCurrentYear()
 initSmoothScroll()
 initMobileNav()
@@ -346,6 +419,7 @@ initRevealOnScroll()
 initActiveSection()
 initContactForm()
 initHeroCanvas()
+initInstagramEmbeds()
 
 if (location.hash) {
   window.requestAnimationFrame(() => scrollToId(location.hash))

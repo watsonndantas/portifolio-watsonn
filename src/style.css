@@ -587,6 +587,7 @@ em {
 #sobre,
 #projetos,
 #stack,
+#instagram,
 #contato {
   scroll-margin-top: calc(var(--header-h) + 12px);
 }
@@ -773,6 +774,45 @@ em {
   font-weight: 500;
   line-height: 1.45;
   max-width: 58ch;
+}
+
+.ig-intro {
+  color: var(--muted);
+  max-width: 54ch;
+  margin: 0 0 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.ig-intro a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  justify-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.ig-embed {
+  width: 100%;
+  max-width: 328px;
+}
+
+.ig-embed blockquote.instagram-media {
+  margin: 0 auto !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+}
+
+.ig-actions {
+  display: flex;
 }
 
 .skills {
