@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="watsonn.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watsonn Sousa | Desenvolvimento de Websites, Aplicativos e Automações com IA</title>
+    <meta
+      name="description"
+      content="Desenvolvimento de websites, landing pages, automações com IA, aplicativos e programas, conforme o objetivo e necessidade do cliente. Watsonn Sousa — HTML, CSS, TypeScript e Python."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvimento de websites, landing pages, automações com IA, aplicativos, programas, TypeScript, Python, Watsonn Sousa"
+    />
+    <meta name="author" content="Watsonn Sousa" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#070b12" />
+    <link rel="canonical" href="" />
+    <link rel="me" href="https://www.instagram.com/watsonn.sousa/" />
+    <link rel="me" href="https://github.com/watsonndantas" />
+    <link rel="me" href="mailto:watsonnrayglann.dev@gmail.com" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Watsonn Sousa" />
+    <meta property="og:title" content="Watsonn Sousa | Websites, Aplicativos e Automações com IA" />
+    <meta
+      property="og:description"
+      content="Desenvolvimento de websites, landing pages, automações com IA, aplicativos e programas, conforme o objetivo e necessidade do cliente."
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="watsonn.png" />
+    <meta property="og:image:alt" content="Retrato de Watsonn Sousa, desenvolvedor de software" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Watsonn Sousa | Websites, Aplicativos e Automações com IA" />
+    <meta
+      name="twitter:description"
+      content="Desenvolvimento de websites, landing pages, automações com IA, aplicativos e programas."
+    />
+    <meta name="twitter:image" content="watsonn.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "#watsonn",
+            "name": "Watsonn Sousa",
+            "jobTitle": "Desenvolvedor de software e websites",
+            "email": "mailto:watsonnrayglann.dev@gmail.com",
+            "telephone": "+55-86-99477-3012",
+            "image": "",
+            "url": "",
+            "sameAs": [
+              "https://github.com/watsonndantas",
+              "https://www.instagram.com/watsonn.sousa/",
+              "https://wa.me/5586994773012"
+            ],
+            "knowsAbout": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "TypeScript",
+              "Python",
+              "SQL",
+              "Git",
+              "desenvolvimento de websites",
+              "landing pages",
+              "automações com IA",
+              "aplicativos"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "name": "Watsonn Sousa — Desenvolvimento Web e Software",
+            "description": "Desenvolvimento de websites, landing pages, automações com inteligência artificial, aplicativos e programas, conforme o objetivo e necessidade do cliente.",
+            "provider": { "@id": "#watsonn" },
+            "areaServed": { "@type": "Country", "name": "Brasil" },
+            "availableLanguage": "Portuguese",
+            "email": "watsonnrayglann.dev@gmail.com",
+            "telephone": "+55-86-99477-3012",
+            "image": "",
+            "serviceType": [
+              "Desenvolvimento de websites",
+              "Landing pages",
+              "Automações com inteligência artificial",
+              "Desenvolvimento de aplicativos",
+              "Programas e software"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Watsonn Sousa",
+            "inLanguage": "pt-BR",
+            "publisher": { "@id": "#watsonn" }
+          }
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        var origin = window.location.origin
+        var path = window.location.pathname.replace(/index\.html$/, '')
+        var pageUrl = origin + path
+        var imageUrl = origin + path.replace(/[^/]+$/, '') + 'watsonn.png'
+        var canonical = document.querySelector('link[rel="canonical"]')
+        if (canonical) canonical.setAttribute('href', pageUrl)
+        var ogUrl = document.querySelector('meta[property="og:url"]')
+        if (ogUrl) ogUrl.setAttribute('content', pageUrl)
+        var ogImage = document.querySelector('meta[property="og:image"]')
+        if (ogImage) ogImage.setAttribute('content', imageUrl)
+        var twitterImage = document.querySelector('meta[name="twitter:image"]')
+        if (twitterImage) twitterImage.setAttribute('content', imageUrl)
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function (node) {
+          try {
+            var data = JSON.parse(node.textContent || '{}')
+            var visit = function (value) {
+              if (!value || typeof value !== 'object') return
+              if (Array.isArray(value)) {
+                value.forEach(visit)
+                return
+              }
+              if (value.image === '' || value.image === '/watsonn.png' || value.image === 'watsonn.png') value.image = imageUrl
+              if (value.url === '') value.url = pageUrl
+              Object.keys(value).forEach(function (key) {
+                visit(value[key])
+              })
+            }
+            visit(data)
+            node.textContent = JSON.stringify(data)
+          } catch (error) {
+            /* crawlers that block JSON still receive the static tags */
+          }
+        })
+      })()
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/main-D-ZJSgXr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-BbKtxpkC.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+      <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="Watsonn Sousa — início">
+          <img class="brand__photo" src="watsonn.png" alt="Watsonn Sousa" width="72" height="72" />
+          <span class="brand__name">Watsonn Sousa</span>
+        </a>
+
+        <div class="header-right">
+          <div class="header-social" aria-label="Redes">
+            <a href="https://github.com/watsonndantas" target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 10.38.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.82.58A10.99 10.99 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+            </a>
+            <a href="https://wa.me/5586994773012" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.5 2 2.02 6.48 2.02 12c0 1.77.46 3.45 1.28 4.92L2 22l5.25-1.38A9.93 9.93 0 0 0 12.04 22c5.52 0 10.02-4.48 10.02-10 0-2.67-1.04-5.18-2.01-7.09zM12.04 20.15c-1.67 0-3.23-.45-4.56-1.23l-.33-.2-3.12.82.83-3.04-.21-.34a8.18 8.18 0 0 1-1.26-4.16c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.81c0 4.55-3.7 8.15-8.84 8.15zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74 1.76.76 2.12.61 2.5.57.38-.04 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.10-.23-.17-.48-.29z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/watsonn.sousa/" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.81 4.81 0 0 0 12 7.2zm0 7.92A3.12 3.12 0 1 1 15.12 12 3.12 3.12 0 0 1 12 15.12zM17.74 6.96a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12zM21.6 7.2a6.55 6.55 0 0 0-1.79-4.64A6.55 6.55 0 0 0 15.17.77C13.53.7 10.46.7 8.82.77A6.57 6.57 0 0 0 4.18 2.56 6.57 6.57 0 0 0 2.39 7.2c-.07 1.64-.07 4.71 0 6.35a6.55 6.55 0 0 0 1.79 4.64 6.57 6.57 0 0 0 4.64 1.79c1.64.07 4.71.07 6.35 0a6.55 6.55 0 0 0 4.64-1.79 6.55 6.55 0 0 0 1.79-4.64c.07-1.64.07-4.7 0-6.35zm-2.23 7.7a3.73 3.73 0 0 1-2.1 2.1c-1.46.58-4.92.45-6.53.45s-5.08.12-6.53-.45a3.73 3.73 0 0 1-2.1-2.1c-.58-1.46-.45-4.92-.45-6.53s-.12-5.08.45-6.53a3.73 3.73 0 0 1 2.1-2.1c1.46-.58 4.92-.45 6.53-.45s5.08-.12 6.53.45a3.73 3.73 0 0 1 2.1 2.1c.58 1.46.45 4.92.45 6.53s.13 5.08-.45 6.53z"/></svg>
+            </a>
+          </div>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navegacao"
+            aria-label="Abrir menu"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="nav" id="navegacao" aria-label="Principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="#stack">Stack</a>
+            <a href="#instagram">Instagram</a>
+            <a class="nav__cta" href="#contato">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <div class="hero__layout">
+          <div class="hero__copy">
+            <div class="atom atom--compact reveal" aria-hidden="true">
+              <span class="atom__orbit atom__orbit--a"></span>
+              <span class="atom__orbit atom__orbit--b"></span>
+              <span class="atom__orbit atom__orbit--c"></span>
+              <span class="atom__core"></span>
+            </div>
+            <p class="eyebrow reveal">Sites · Apps · Automação</p>
+            <h1 class="hero__name reveal">Watsonn Sousa</h1>
+            <p class="hero__subtitle reveal">
+              Desenvolvimento de websites, landing pages, automações com IA,
+              aplicativos e programas, conforme o objetivo e necessidade do
+              cliente.
+            </p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="projetos.html">Ver Projetos</a>
+              <a class="btn btn--ghost" href="#contato">Entrar em Contato</a>
+            </div>
+          </div>
+
+          <figure class="portrait reveal">
+            <img src="watsonn.png" alt="Retrato de Watsonn Sousa" width="720" height="720" />
+            <figcaption class="portrait__social">
+              <a href="https://github.com/watsonndantas" target="_blank" rel="me noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 10.38.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.82.58A10.99 10.99 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+                GitHub
+              </a>
+              <a href="https://wa.me/5586994773012" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.5 2 2.02 6.48 2.02 12c0 1.77.46 3.45 1.28 4.92L2 22l5.25-1.38A9.93 9.93 0 0 0 12.04 22c5.52 0 10.02-4.48 10.02-10 0-2.67-1.04-5.18-2.01-7.09zM12.04 20.15c-1.67 0-3.23-.45-4.56-1.23l-.33-.2-3.12.82.83-3.04-.21-.34a8.18 8.18 0 0 1-1.26-4.16c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.81c0 4.55-3.7 8.15-8.84 8.15zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74 1.76.76 2.12.61 2.5.57.38-.04 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.10-.23-.17-.48-.29z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://www.instagram.com/watsonn.sousa/" target="_blank" rel="me noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.81 4.81 0 0 0 12 7.2zm0 7.92A3.12 3.12 0 1 1 15.12 12 3.12 3.12 0 0 1 12 15.12zM17.74 6.96a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12zM21.6 7.2a6.55 6.55 0 0 0-1.79-4.64A6.55 6.55 0 0 0 15.17.77C13.53.7 10.46.7 8.82.77A6.57 6.57 0 0 0 4.18 2.56 6.57 6.57 0 0 0 2.39 7.2c-.07 1.64-.07 4.71 0 6.35a6.55 6.55 0 0 0 1.79 4.64 6.57 6.57 0 0 0 4.64 1.79c1.64.07 4.71.07 6.35 0a6.55 6.55 0 0 0 4.64-1.79 6.55 6.55 0 0 0 1.79-4.64c.07-1.64.07-4.7 0-6.35zm-2.23 7.7a3.73 3.73 0 0 1-2.1 2.1c-1.46.58-4.92.45-6.53.45s-5.08.12-6.53-.45a3.73 3.73 0 0 1-2.1-2.1c-.58-1.46-.45-4.92-.45-6.53s-.12-5.08.45-6.53a3.73 3.73 0 0 1 2.1-2.1c1.46-.58 4.92-.45 6.53-.45s5.08-.12 6.53.45a3.73 3.73 0 0 1 2.1 2.1c.58 1.46.45 4.92.45 6.53s.13 5.08-.45 6.53z"/></svg>
+                Instagram
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="section__inner">
+          <header class="section__header reveal">
+            <p class="section__index">01 — Sobre</p>
+            <h2>Perfil</h2>
+          </header>
+
+          <div class="about">
+            <div class="about__text reveal">
+              <p>
+                O front-end é desenvolvido em HTML, CSS, JavaScript e
+                TypeScript: markup semântico, layout responsivo, tipografia
+                e estados de interface no DOM. Landing page, site
+                institucional ou aplicação web compartilham a mesma base —
+                estrutura clara, CSS previsível e TypeScript onde a lógica
+                exige tipagem.
+              </p>
+              <p>
+                Os formulários são validados no cliente (campos, e-mail e
+                extensão da mensagem) antes de qualquer envio. A persistência
+                de dados, quando necessária, é feita com SQL. O
+                versionamento ocorre no Git, com histórico e branches.
+              </p>
+              <p>
+                Fora do navegador, o stack é Python. Aplicação desktop com
+                CustomTkinter, leitura de PDF, chamada a API de modelo
+                generativo e gravação de notas no Obsidian — fluxo
+                implementado no Marie Curie. Scripts geram documentos em
+                lote, processam CSV/JSON e encadeiam etapas de um pipeline
+                enxuto, sem framework desnecessário quando um módulo resolve.
+              </p>
+              <p>
+                APIs REST são integradas quando o produto depende de serviço
+                externo (IA, webhook ou banco de dados). A escolha da
+                ferramenta segue o problema: TypeScript na interface, Python
+                na automação e no desktop, SQL na consulta. O critério é
+                funcionamento, manutenibilidade e o mínimo de dependências.
+              </p>
+            </div>
+
+            <ul class="stats reveal">
+              <li>
+                <span class="stats__label">Front</span>
+                <span class="stats__value">HTML, CSS, JS, TypeScript</span>
+              </li>
+              <li>
+                <span class="stats__label">Desktop e script</span>
+                <span class="stats__value">Python, CustomTkinter</span>
+              </li>
+              <li>
+                <span class="stats__label">Dados e versionamento</span>
+                <span class="stats__value">SQL, Git, API REST</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="projetos">
+        <div class="section__inner">
+          <header class="section__header reveal">
+            <p class="section__index">02 — Portfólio</p>
+            <h2>Projetos</h2>
+          </header>
+
+          <div class="projects">
+            <article class="project-card reveal">
+              <div class="project-card__top">
+                <span class="project-card__num">01</span>
+                <div class="project-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <rect x="7" y="4" width="18" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M11 10h10M11 15h10M11 20h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="project-card__kind">App Desktop</p>
+              <h3>Marie Curie</h3>
+              <p>
+                Aplicação desktop em Python. O usuário seleciona um PDF; a
+                IA gera o resumo e o texto é organizado no Obsidian.
+              </p>
+              <a class="project-card__more" href="projetos.html#marie-curie">Como funciona</a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__top">
+                <span class="project-card__num">02</span>
+                <div class="project-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <rect x="5" y="7" width="22" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M5 12h22" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="9" cy="9.5" r="0.9" fill="currentColor"/>
+                    <circle cx="12.2" cy="9.5" r="0.9" fill="currentColor"/>
+                    <rect x="9" y="15" width="8" height="6" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                    <path d="M20 16h5M20 20h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="project-card__kind">Web</p>
+              <h3>Sites e interfaces</h3>
+              <p>
+                Sites e landing pages com layout adaptado a dispositivos
+                móveis. Este portfólio é um exemplo.
+              </p>
+              <a class="project-card__more" href="projetos.html#sites">Como funciona</a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__top">
+                <span class="project-card__num">03</span>
+                <div class="project-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M6 9h20M6 16h14M6 23h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M22 20.5 24.2 23 28 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="project-card__kind">Automação</p>
+              <h3>Automação de fluxos</h3>
+              <p>
+                Scripts em Python para geração de documentos e processamento
+                de dados, reduzindo tarefas repetitivas.
+              </p>
+              <a class="project-card__more" href="projetos.html#automacao">Como funciona</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stack">
+        <div class="section__inner">
+          <header class="section__header reveal">
+            <p class="section__index">03 — Stack</p>
+            <h2>Tecnologias</h2>
+          </header>
+
+          <ul class="skills reveal">
+            <li class="skill">
+              <span class="skill__mark">Py</span>
+              <span>Python</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">TS</span>
+              <span>TypeScript</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">JS</span>
+              <span>JavaScript</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">&lt;/&gt;</span>
+              <span>HTML</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">SQL</span>
+              <span>SQL</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">UI</span>
+              <span>CustomTkinter</span>
+            </li>
+            <li class="skill">
+              <span class="skill__mark">Git</span>
+              <span>Git</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="instagram">
+        <div class="section__inner">
+          <header class="section__header reveal">
+            <p class="section__index">04 — Instagram</p>
+            <h2>Instagram</h2>
+          </header>
+          <p class="ig-intro reveal">
+            Publicações de
+            <a href="https://www.instagram.com/watsonn.sousa/" target="_blank" rel="me noopener noreferrer">@watsonn.sousa</a>,
+            incorporadas pelo embed oficial da plataforma.
+          </p>
+          <div id="instagram-embeds" class="ig-grid"></div>
+          <div class="ig-actions reveal">
+            <a
+              class="btn btn--ghost"
+              href="https://www.instagram.com/watsonn.sousa/"
+              target="_blank"
+              rel="me noopener noreferrer"
+            >
+              Abrir perfil no Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="section__inner">
+          <header class="section__header reveal">
+            <p class="section__index">05 — Contato</p>
+            <h2>Contato</h2>
+          </header>
+
+          <div class="contact">
+            <form class="contact-form reveal" id="contact-form" novalidate>
+              <p class="contact-form__intro">
+                Descreva o projeto ou a demanda. A mensagem será lida e
+                respondida.
+              </p>
+
+              <div class="field">
+                <label for="name">Nome</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  maxlength="80"
+                  placeholder="Seu nome"
+                />
+                <p class="field__error" data-error-for="name" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="120"
+                  placeholder="voce@email.com"
+                />
+                <p class="field__error" data-error-for="email" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="message">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="12"
+                  maxlength="2000"
+                  rows="6"
+                  placeholder="Descreva a demanda"
+                ></textarea>
+                <p class="field__error" data-error-for="message" hidden></p>
+              </div>
+
+              <button class="btn btn--primary" type="submit">Enviar mensagem</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-aside reveal">
+              <p>
+                O contato também pode ser feito por e-mail, WhatsApp, GitHub
+                ou Instagram.
+              </p>
+              <div class="social">
+                <a class="social__link" href="mailto:watsonnrayglann.dev@gmail.com">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
+                  watsonnrayglann.dev@gmail.com
+                </a>
+                <a class="social__link" href="https://github.com/watsonndantas" target="_blank" rel="me noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 10.38.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.82.58A10.99 10.99 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+                  github.com/watsonndantas
+                </a>
+                <a class="social__link" href="https://wa.me/5586994773012" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.5 2 2.02 6.48 2.02 12c0 1.77.46 3.45 1.28 4.92L2 22l5.25-1.38A9.93 9.93 0 0 0 12.04 22c5.52 0 10.02-4.48 10.02-10 0-2.67-1.04-5.18-2.01-7.09zM12.04 20.15c-1.67 0-3.23-.45-4.56-1.23l-.33-.2-3.12.82.83-3.04-.21-.34a8.18 8.18 0 0 1-1.26-4.16c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.81c0 4.55-3.7 8.15-8.84 8.15zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74 1.76.76 2.12.61 2.5.57.38-.04 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.10-.23-.17-.48-.29z"/></svg>
+                  WhatsApp (86) 99477-3012
+                </a>
+                <a class="social__link" href="https://www.instagram.com/watsonn.sousa/" target="_blank" rel="me noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.81 4.81 0 0 0 12 7.2zm0 7.92A3.12 3.12 0 1 1 15.12 12 3.12 3.12 0 0 1 12 15.12zM17.74 6.96a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12zM21.6 7.2a6.55 6.55 0 0 0-1.79-4.64A6.55 6.55 0 0 0 15.17.77C13.53.7 10.46.7 8.82.77A6.57 6.57 0 0 0 4.18 2.56 6.57 6.57 0 0 0 2.39 7.2c-.07 1.64-.07 4.71 0 6.35a6.55 6.55 0 0 0 1.79 4.64 6.57 6.57 0 0 0 4.64 1.79c1.64.07 4.71.07 6.35 0a6.55 6.55 0 0 0 4.64-1.79 6.55 6.55 0 0 0 1.79-4.64c.07-1.64.07-4.7 0-6.35zm-2.23 7.7a3.73 3.73 0 0 1-2.1 2.1c-1.46.58-4.92.45-6.53.45s-5.08.12-6.53-.45a3.73 3.73 0 0 1-2.1-2.1c-.58-1.46-.45-4.92-.45-6.53s-.12-5.08.45-6.53a3.73 3.73 0 0 1 2.1-2.1c1.46-.58 4.92-.45 6.53-.45s5.08-.12 6.53.45a3.73 3.73 0 0 1 2.1 2.1c.58 1.46.45 4.92.45 6.53s.13 5.08-.45 6.53z"/></svg>
+                  @watsonn.sousa
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Watsonn Sousa</p>
+        <a href="#inicio">Voltar ao topo</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
