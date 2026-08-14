@@ -165,15 +165,15 @@ function validateContact(values: ContactFields): Partial<Record<keyof ContactFie
   const errors: Partial<Record<keyof ContactFields, string>> = {}
 
   if (values.name.length < 2) {
-    errors.name = 'Informe seu nome (mínimo 2 caracteres).'
+    errors.name = 'Informe o nome.'
   }
 
   if (!EMAIL_PATTERN.test(values.email)) {
-    errors.email = 'Digite um email válido.'
+    errors.email = 'Informe um e-mail válido.'
   }
 
   if (values.message.length < 12) {
-    errors.message = 'A mensagem precisa ter pelo menos 12 caracteres.'
+    errors.message = 'A mensagem deve conter pelo menos 12 caracteres.'
   }
 
   return errors
@@ -218,7 +218,7 @@ function initContactForm(): void {
     names.forEach((name) => setFieldError(form, name, errors[name] ?? null))
 
     if (Object.keys(errors).length > 0) {
-      status.textContent = 'Revise os campos destacados para enviar.'
+      status.textContent = 'Corrija os campos destacados e envie novamente.'
       status.classList.add('is-error')
       const firstInvalid = form.querySelector<HTMLElement>('.field.is-invalid input, .field.is-invalid textarea')
       firstInvalid?.focus()
@@ -228,7 +228,7 @@ function initContactForm(): void {
     form.reset()
     form.classList.add('is-success')
     status.classList.add('is-ok')
-    status.textContent = `Obrigado, ${values.name}. Sua mensagem foi registrada neste protótipo — em breve conecto o envio a um servidor. Enquanto isso, escreva para watsonnrayglann.dev@gmail.com ou use o WhatsApp, o Instagram e o GitHub.`
+    status.textContent = `Obrigado, ${values.name}. O envio automático ainda não está disponível. Utilize o e-mail watsonnrayglann.dev@gmail.com ou o WhatsApp.`
   })
 }
 
